@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link da Fonte MontSerrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0 !important;
+        }
+
+        .menu {
+            width: 100%;
+            /* width = Largura */
+            height: 80px;
+            /* height = altura */
+            background-color: #212529;
+            /* Background-Color - Cor de Fundo */
+            display: flex;
+            /* Flex - Para alinhar os elementos filhos*/
+
+        }
+
+        .menu .logo {
+            flex: 1;
+            /* Ocupará o espaço de 1 parte */
+            background-image: url('img/resto.png');
+            /* Background-Image - Imagem de Fundo */
+            background-repeat: no-repeat;
+            /* Repetição de Background */
+            background-position: center center;
+            /* Posição do Background */
+        }
+
+        .menu ul {
+            text-align: center;
+            /* Alinhamento centralizado */
+            flex: 4;
+            /* Ocupará o espaço de 4 partes */
+            margin-top: 30px;
+            /* Espaço Externo ao Elemento */
+            align-items: center;
+        }
+
+        .menu ul li {
+            display: inline;
+            /* inline - Alinhar em linha */
+            margin-left: 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            /* Remoção do underline */
+            color: #fff;
+            /* color - cor do texto */
+            font-family: 'Montserrat', sans-serif;
+            /* font-family - família da fonte*/
+            padding: 20px;
+            /* background-color: #ff9100; */
+
+
+        }
+
+        .menu ul li a:hover {
+            /* border-bottom: 3px solid #ff9100; */
+            background-color: #ff9100;
+        }
+
+
+        .banner {
+            width: 100%;
+            height: 500px;
+            background-image: url('img/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            background-attachment: fixed;
+        }
+
+        .banner .text {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner .text h2 {
+            color: #fff;
+            margin-top: 0;
+            font-family: 'Kaushan Script', cursive;
+            font-weight: 100;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            /* background-color: #91c76d; */
+            min-height: 300px;
+            display: flex;
+        }
+
+        .mkt {}
+
+        .mkt .mkt-img {
+            flex: 1;
+            height: 500px;
+            background-image: url('img/burguer.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .mkt .mkt-text {
+            flex: 1;
+            height: 500px;
+        }
+
+        .:wrap;
+
+            {}
+
+        .products {
+            /* background-color: #ff9100; */
+            min-height: 300px;
+            width: 100%;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 3em;
+        }
+
+        .product-container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .products .product-items {
+            /* background-color: aqua;                 */
+            width: 50%;
+            height: 200px;
+            display: flex;
+        }
+
+        .products .product-items .items-img {
+            /* flex: 1; */
+            height: 150px;
+            width: 150px;
+
+            /* background-color: #ff9100; */
+        }
+
+        .products .product-items .items-text {
+            flex: 1;
+            height: 200px;
+            padding: 0 20px;
+            /* background-color: #09ff00;  */
+        }
+
+        .videobanner {
+            width: 100%;
+            height: 500px;
+            background-image: url('img/video-banner.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Cor escura com opacidade (alpha) de 0.5 para o filtro escuro */
+        }
+
+        .video-banner h2 {
+            color: #fff;
+            margin-top: 0;
+            font-family: 'Kaushan Script', cursive;
+            font-weight: 100;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            z-index: 999;
+        }
+
+        .videobanner .text {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .videobanner .text h3 {
+            font-family: 'Handlee', cursive;
+            font-weight: 100;
+            color: #fff;
+        }
+
+        .otherBanner {
+            width: 100%;
+            height: 600px;
+            background-image: url('img/restaurantbanner.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+        }
+
+        .otherBanner .text {
+            flex: 1;
+            margin-left: 10%;
+            margin-right: 60%;
+            color: #fff;
+        }
+
+        .otherBanner .text h2{
+        font-size: 2em;
+        }
+
+        .otherBanner .text h1{
+        font-size: 3em;
+        }
+
+        .otherBanner .text p{
+        font-size: 2em;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="menu">
+
+        <div class="logo"></div>
+
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="escola.html"> Escola </a></li>
+            <li><a href="cursos.html"> Cursos </a></li>
+            <li><a href="contato.html"> Contato </a></li>
+        </ul>
+
+    </nav>
+
+    <section class="banner">
+        <main class="text">
+            <h2>
+                <span style="font-size: 3em;"> Fast Food </span>
+                <br>
+                <span style="font-size: 1em; font-family: 'Montserrat', sans-serif;">
+                    Os Lanches mais
+                    <strong style="background-color: rgba(174, 0, 255, 0.7); padding: 4px;">
+                        Saborosos
+                    </strong>
+                    em Guaratinguetá - SP!!!
+                </span>
+            </h2>
+        </main>
+
+
+    </section>
+
+    <style>
+        .mkt {
+            display: flex;
+        }
+
+        .mkt .box1 {
+            flex: 1;
+            margin: 10px;
+            height: 600px;
+            background-image: url(img/pedido.png);
+            background-repeat: no-repeat;
+            margin-left: 15%;
+        }
+
+        .mkt .box2 {
+            flex: 1;
+            margin: 10px;
+            height: 500px;
+            text-align: center;
+            margin-top: 10%;
+            margin-right: 15%;
+            font-size: 2em;
+        }
+
+        .mkt .box2 h4 {
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        .mkt .box2 p.off {
+            color: #37a000;
+        }
+
+        .mkt .box2 a {
+            list-style: none;
+            text-decoration: none;
+            background-color: #ff9100;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: #fff;
+            margin-top: 10%;
+        }
+
+        .mkt .box2 p.description {}
+    </style>
+
+    <div class="flex-menu">
+        <div class="logotipo">
+
+        </div>
+        <div class="nav-menu">
+
+        </div>
+        <div class="logotipo">
+
+        </div>
+        <div class="nav-menu">
+
+        </div>
+    </div>
+
+
+    <div class="conteiner-mkt">
+        <div class="img-mkt">
+
+        </div>
+        <div class="text-mkt">
+
+        </div>
+    </div>
+
+    <div class="top"> </div>
+
+    <div class="pai">
+        <div class="filho1"> </div>
+        <div class="filho2"> </div>
+        <div class="filho3"> </div>
+    </div>
+
+    <div class="mkt">
+        <div class="box1"> </div>
+        <div class="box2">
+            <p class="off">
+                40% off
+            </p>
+            <h4>
+                Cheese Vegetable Sandwich
+            </h4>
+            <p class="description">
+                Vegetable Sandwich + Cold Drink
+            </p>
+            <a href="">order now</a>
+        </div>
+    </div>
+
+    <section class="otherBanner">
+        <main class="text">
+            <h2>
+                Our
+            </h2>
+            <h1>
+                Restaurant
+            </h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium officia eligendi doloremque
+                obcaecati, dicta quas natus ipsam incidunt rem blanditiis, vel a. Sapiente, sint incidunt? Cupiditate
+                quia architecto saepe quos?</p>
+        </main>
+    </section>
+
+    <section class="products">
+        <h2>Menu</h2>
+        <div class="product-container">
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/1-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/2-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/3-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/4-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/5-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-items ">
+                <div class="items-img"
+                    style="background-image: url('img/6-product.jpg'); background-repeat: no-repeat; border-radius: 50%;">
+                </div>
+                <div class="items-text">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit porro minima excepturi
+                        dignissimos et cumque!
+                    </p>
+                    <p>
+                        $ 50.00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="videobanner">
+        <main class="text">
+            <h3>
+                <span style="font-size: 3em;">How to make the best pizza</span>
+            </h3>
+        </main>
+    </section>
+
+    <section>
+        
+    </section>
+
+</body>
+
+</html>
